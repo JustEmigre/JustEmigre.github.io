@@ -1,0 +1,63 @@
+.footer {
+	background-color: $bg_color;
+	padding-top: 70px;
+	color: #fff;
+	.social-list {
+		margin-top: 24px;
+		svg {
+			fill: #fff;
+		}
+	}
+	&__contacts {
+		text-align: right;
+		margin-top: 24px;
+		li {
+			+ li {
+				margin-top: 10px;
+			}
+		}
+	}
+	@media (max-width: $media_xs) {
+		padding-top: 50px;
+		text-align: center;
+	}
+	&__nav-list {
+		display: flex;
+		justify-content: flex-end;
+		@media (max-width: $media_xs) {
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-top: 15px;
+		}
+		li {
+			&:not(:last-child) {
+				margin-right: 40px;
+				@media (max-width: $media_xs) {
+					margin-right: 15px;
+				}
+			}
+			a {
+				line-height: 36px;
+			}
+		}
+	}
+	a {
+		color: #fff;
+		&:hover {
+			color: $accent_color;
+		}
+	}
+	.copyright {
+		text-align: center;
+		font-size: 14px;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		padding: 30px;
+		margin-top: 30px;
+		a {
+			color: $accent_color;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
