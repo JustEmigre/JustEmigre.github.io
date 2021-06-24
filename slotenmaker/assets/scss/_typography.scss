@@ -52,9 +52,8 @@ h6 {
 }
 
 h1 {
-	font-size: 68px;
+	font-size: 50px;
 }
-
 h2 {
 	font-size: 50px;
 	// @media (max-width: $media_lg) {
@@ -132,4 +131,8 @@ a {
 .container {
 	position: relative;
 	z-index: 1;
+}
+
+.bg-secondary {
+	background-color: $bg_secondary_color;
 }
