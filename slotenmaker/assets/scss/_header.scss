@@ -11,23 +11,56 @@
 		max-width: 100%;
 		position: relative;
 	}
+	@media (max-width: $media_sm) {
+		.logo {
+			margin-right: 0;
+			&__title,
+			&__description {
+				display: none;
+			}
+			img {
+				margin-right: 0;
+			}
+		}
+	}
 	.row {
 		align-items: center;
 	}
+	&__row {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	&__col {
+		padding-left: 15px;
+		padding-right: 15px;
+		flex: 0 0 auto;
+	}
+
 	&__left {
 		display: flex;
 		align-items: center;
+		@media (max-width: $media_sm) {
+			padding-right: 0;
+		}
 	}
 	.nav-menu-col {
-		@media (max-width: $media_md) {
+		@media (max-width: $media_lg) {
 			order: 1;
 		}
 	}
 	&__lang {
 		display: flex;
 		justify-content: flex-end;
+		align-items: center;
 		> * + * {
 			margin-left: 50px;
+			@media (max-width: $media_xl) {
+				margin-left: 30px;
+			}
+			@media (max-width: $media_sm) {
+				margin-left: 20px;
+			}
 		}
 	}
 	&__lang-link {
@@ -37,6 +70,11 @@
 		line-height: 34px;
 		border: 1px solid #fff;
 		text-align: center;
+		@media (max-width: $media_sm) {
+			width: 36px;
+			height: 30px;
+			line-height: 28px;
+		}
 		&:hover {
 			background-color: $accent_color;
 			border-color: $accent_color;
@@ -56,6 +94,9 @@
 			width: 18px;
 			height: 18px;
 			margin-right: 10px;
+			@media (max-width: 340px) {
+				display: none;
+			}
 		}
 		&:hover {
 			color: $accent_color;
@@ -73,7 +114,7 @@
 	background-color: $bg_color;
 	position: fixed;
 	transition: 0.3s ease-in-out;
-	@media (max-width: $media_md) {
+	@media (max-width: $media_lg) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -94,9 +135,12 @@
 		position: relative;
 		&:not(:last-child) {
 			margin-right: 40px;
-			@media (max-width: $media_md) {
+			@media (max-width: $media_xl) {
+				margin-right: 30px;
+			}
+			@media (max-width: $media_lg) {
 				margin-right: 0;
-				margin-bottom: 10px;
+				margin-bottom: 15px;
 			}
 		}
 		a {
@@ -111,8 +155,8 @@
 			color: #fff;
 			position: relative;
 			user-select: none;
-			@media (max-width: $media_md) {
-				font-size: 18px;
+			@media (max-width: $media_lg) {
+				font-size: 20px;
 			}
 			&:before {
 				content: "";
@@ -147,7 +191,7 @@
 	}
 }
 
-@media (min-width: 991px) {
+@media (min-width: 1200px) {
 	.nav-menu {
 		margin-top: 0;
 		display: block !important;
@@ -189,7 +233,7 @@
 		transition: all 0.4s ease, visibility 0.1s ease;
 	}
 }
-@media (min-width: 991px) {
+@media (min-width: 1200px) {
 	.nav-btn {
 		display: none;
 	}

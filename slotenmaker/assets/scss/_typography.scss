@@ -11,7 +11,7 @@ body {
 	position: relative;
 	overflow-x: hidden;
 	font-weight: 300;
-	@media (max-width: $media_sm) {
+	@media (max-width: $media_lg) {
 		font-size: 14px;
 	}
 	&.no-scroll {
@@ -53,39 +53,51 @@ h6 {
 
 h1 {
 	font-size: 50px;
+	@media (max-width: $media_lg) {
+		font-size: 38px;
+	}
+	@media (max-width: $media_sm) {
+		font-size: 32px;
+	}
 }
 h2 {
 	font-size: 50px;
-	// @media (max-width: $media_lg) {
-	// 	font-size: 44px;
-	// }
-	// @media (max-width: $media_sm) {
-	// 	font-size: 34px;
-	// }
+	@media (max-width: $media_lg) {
+		font-size: 38px;
+	}
+	@media (max-width: $media_sm) {
+		font-size: 32px;
+	}
 	span {
 		color: $accent_color;
 	}
 	+ * {
 		margin-top: 50px;
+		@media (max-width: $media_lg) {
+			margin-top: 40px;
+		}
 	}
 }
 
 h3 {
 	font-size: 38px;
-	// @media (max-width: $media_lg) {
-	// 	font-size: 24px;
-	// }
-	// @media (max-width: $media_sm) {
-	// 	font-size: 20px;
-	// }
+	@media (max-width: $media_lg) {
+		font-size: 28px;
+	}
 }
 
 h4 {
 	font-size: 28px;
+	@media (max-width: $media_lg) {
+		font-size: 22px;
+	}
 }
 
 h5 {
 	font-size: 20px;
+	@media (max-width: $media_lg) {
+		font-size: 16px;
+	}
 	+ * {
 		margin-top: 16px;
 	}
@@ -93,6 +105,9 @@ h5 {
 
 h6 {
 	font-size: 16px;
+	@media (max-width: $media_lg) {
+		font-size: 14px;
+	}
 }
 
 * {

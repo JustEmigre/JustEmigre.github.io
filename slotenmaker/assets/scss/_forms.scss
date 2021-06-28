@@ -30,7 +30,7 @@ textarea {
 	color: #fff;
 	font-size: 16px;
 	font-weight: 300;
-	@media (max-width: $media_sm) {
+	@media (max-width: $media_lg) {
 		font-size: 14px;
 	}
 	&:hover,

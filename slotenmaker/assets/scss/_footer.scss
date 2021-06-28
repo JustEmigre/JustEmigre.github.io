@@ -2,6 +2,18 @@
 	background-color: $bg_color;
 	padding-top: 70px;
 	color: #fff;
+	@media (max-width: $media_sm) {
+		// text-align: center;
+		padding-top: 60px;
+	}
+	.logo {
+		margin-right: 0;
+		display: inline-flex;
+		// @media (max-width: $media_sm) {
+		// 	flex-direction: column;
+		// 	align-items: center;
+		// }
+	}
 	.social-list {
 		margin-top: 24px;
 		a {
@@ -14,31 +26,43 @@
 	&__contacts {
 		text-align: right;
 		margin-top: 24px;
+		@media (max-width: $media_sm) {
+			text-align: left;
+			// text-align: center;
+		}
 		li {
 			+ li {
 				margin-top: 10px;
 			}
 		}
 	}
-	@media (max-width: $media_xs) {
-		padding-top: 50px;
-		text-align: center;
-	}
+
 	&__nav-list {
 		display: flex;
 		justify-content: flex-end;
-		@media (max-width: $media_xs) {
-			justify-content: center;
+		@media (max-width: $media_sm) {
+			// justify-content: center;
+			justify-content: flex-start;
 			flex-wrap: wrap;
-			margin-top: 15px;
+			margin-top: 24px;
+			// margin-left: -10px;
+			// margin-right: -10px;
 		}
 		li {
 			&:not(:last-child) {
 				margin-right: 40px;
-				@media (max-width: $media_xs) {
-					margin-right: 15px;
+				@media (max-width: $media_lg) {
+					margin-right: 30px;
+				}
+				@media (max-width: $media_sm) {
+					// margin-right: 10px;
+					margin-right: 20px;
 				}
 			}
+			// @media (max-width: $media_sm) {
+			// 	margin-left: 10px;
+			// 	margin-right: 10px;
+			// }
 			a {
 				line-height: 36px;
 			}
@@ -54,13 +78,29 @@
 		text-align: center;
 		font-size: 14px;
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
-		padding: 30px;
+		padding: 30px 0;
 		margin-top: 30px;
+		@media (max-width: $media_sm) {
+			text-align: left;
+		}
 		a {
 			color: $accent_color;
 			&:hover {
 				color: #fff;
 			}
+		}
+	}
+
+	&__col {
+		@media (max-width: $media_sm) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			// text-align: center;
+			text-align: left;
+			align-items: flex-start;
 		}
 	}
 }

@@ -34,6 +34,40 @@
   });
 
   /* ------------------- SLIDER PRODUCTS ------------------ */
+  if ($('.our-services__row')[0]) {
+    $('.our-services__row').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      speed: 800,
+      cssEase: 'ease-out',
+      touchThreshold: 450,
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+  }
+
+  /* ------------------- SLIDER PRODUCTS ------------------ */
   if ($('.our-products__slider')[0]) {
     $('.our-products__slider').slick({
       slidesToShow: 3,
@@ -42,13 +76,19 @@
       arrows: false,
       speed: 800,
       cssEase: 'ease-out',
-      touchThreshold: 400,
+      touchThreshold: 450,
       adaptiveHeight: true,
       responsive: [
         {
           breakpoint: 991,
           settings: {
             slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
           },
         },
       ],
