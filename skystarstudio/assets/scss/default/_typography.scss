@@ -1,0 +1,108 @@
+/*-------------------- FONTS --------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Philosopher:wght@700&display=swap");
+
+/*-------------------- DEFAULT STYLES --------------------*/
+*::selection {
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+}
+body {
+	color: $primary_color;
+	line-height: 1.55;
+	font-family: $font_family;
+	font-weight: 400;
+	min-width: 320px;
+	font-size: 14px;
+	@media (min-width: $media_xl) {
+		font-size: $font_size;
+	}
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $primary_color;
+	transition: 0.35s ease;
+	&:hover {
+		color: $accent_color;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font_family_title;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 56px;
+	line-height: 1;
+	@media (min-width: $media_xl) {
+		font-size: 68px;
+	}
+	@media (min-width: $media_xxl) {
+		font-size: 72px;
+	}
+	+ p {
+		margin-top: 30px;
+		@media (min-width: $media_xl) {
+			margin-top: 40px;
+		}
+	}
+}
+
+h2 {
+	font-size: 44px;
+	line-height: 1.1;
+	@media (min-width: $media_xl) {
+		font-size: 50px;
+	}
+	+ p {
+		margin-top: 20px;
+		@media (min-width: $media_xl) {
+			margin-top: 30px;
+		}
+	}
+}
+
+h3 {
+	font-size: 40px;
+	line-height: 1;
+
+	+ p {
+		margin-top: 20px;
+	}
+}
+
+h4 {
+	font-size: 26px;
+	line-height: 1.2;
+	@media (min-width: $media_xl) {
+		font-size: 30px;
+	}
+	+ p {
+		margin-top: 20px;
+	}
+}
+
+h5 {
+	font-size: 20px;
+	line-height: 1;
+	+ p {
+		margin-top: 20px;
+	}
+}
+
+h6 {
+	font-size: 16px;
+	line-height: 1.2;
+	+ p {
+		margin-top: 20px;
+	}
+}

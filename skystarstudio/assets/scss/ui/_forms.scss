@@ -1,0 +1,66 @@
+button,
+input[type="button"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+	font-family: $font_family;
+}
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 0;
+	font-family: $font_family;
+	font-size: 14px;
+	color: $primary_color;
+	border: none;
+	border-bottom: 1px solid rgba(242, 242, 243, 0.65);
+	transition: 0.35s ease;
+	background: transparent;
+	@media (min-width: $media_xl) {
+		font-size: 16px;
+		height: 60px;
+	}
+	&::placeholder {
+		color: $primary_color;
+		opacity: 0.65;
+		transition: 0.35s ease;
+	}
+	&:hover {
+		border-color: rgba(242, 242, 243, 0.75);
+	}
+	&:focus {
+		border-color: rgba(242, 242, 243, 1);
+		&::placeholder {
+			transform: translateX(7px);
+			opacity: 0;
+		}
+	}
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}

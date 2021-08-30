@@ -1,0 +1,19 @@
+/*----------------------- TO-TOP -----------------------*/
+.to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  transition: 0.3s ease-in-out;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

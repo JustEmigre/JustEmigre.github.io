@@ -1,0 +1,49 @@
+.contacts {
+  &__wrap {
+    max-width: 818px;
+    margin-top: 30px;
+    @media (min-width: $media_xl) {
+      margin-top: 40px;
+      max-width: 910px;
+    }
+  }
+  .form-wrap {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: -30px;
+    @media (min-width: $media_xl) {
+      margin-top: -40px;
+    }
+    li {
+      padding-left: 15px;
+      padding-right: 15px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-top: 30px;
+      @media (min-width: $media_xl) {
+        margin-top: 40px;
+      }
+      .input-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .input-item {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+      }
+    }
+  }
+  .btn {
+    margin-top: 30px;
+    @media (min-width: $media_xl) {
+      margin-top: 40px;
+    }
+  }
+}

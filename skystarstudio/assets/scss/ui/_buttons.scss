@@ -1,0 +1,48 @@
+.btn {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), $accent_color;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 48px;
+  height: 50px;
+  display: inline-block;
+  min-width: 150px;
+  transition: 0.35s ease;
+  border-radius: 30px;
+  font-size: $font_size_sm;
+  color: $primary_color;
+  letter-spacing: 0.05em;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 30px rgba(77, 25, 145, 0.5);
+  user-select: none;
+  @media (min-width: $media_xl) {
+    line-height: 58px;
+    height: 60px;
+    min-width: 182px;
+    padding: 0 40px;
+  }
+  &:hover {
+    color: $primary_color;
+    box-shadow: 0px 0px 50px $accent_color;
+  }
+  &:active {
+    color: $primary_color;
+    box-shadow: 0px 0px 25px $accent_color;
+  }
+  &.btn-invert {
+    border-color: $primary_color;
+    background: transparent;
+    box-shadow: none;
+    &:hover {
+      background: #260043;
+      box-shadow: 0px 0px 50px #8f00ff;
+      border-color: #260043;
+    }
+    &:active {
+      box-shadow: 0px 0px 25px #8f00ff;
+      border-color: #260043;
+    }
+  }
+}

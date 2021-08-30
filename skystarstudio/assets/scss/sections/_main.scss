@@ -1,0 +1,33 @@
+.main {
+  &__wrap {
+    max-width: 560px;
+    position: relative;
+    z-index: 5;
+    @media (min-width: $media_xl) {
+      max-width: 630px;
+    }
+    @media (min-width: $media_xxl) {
+      max-width: 740px;
+    }
+  }
+  &__btn-cover {
+    margin-top: 65px;
+    .btn {
+      + * {
+        margin-left: 30px;
+      }
+    }
+  }
+  p {
+    font-size: 16px;
+    @media (min-width: $media_xl) {
+      font-size: 18px;
+    }
+    @media (min-width: $media_xxl) {
+      font-size: 22px;
+    }
+  }
+  .slogan {
+    display: flex !important;
+  }
+}

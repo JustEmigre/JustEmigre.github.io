@@ -1,0 +1,36 @@
+.about {
+  &__slider-wrap {
+    max-width: 280px;
+    margin-top: 50px;
+    padding-top: 50px;
+    position: relative;
+    @media (min-width: $media_xl) {
+      margin-top: 60px;
+      padding-top: 60px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, #f2f2f3 0%, rgba(242, 242, 243, 0) 100%);
+      opacity: 0.25;
+    }
+  }
+
+  &__two {
+    .btn {
+      margin-top: 30px;
+      @media (min-width: $media_xl) {
+        margin-top: 40px;
+      }
+    }
+    .about {
+      &__slider-wrap {
+        max-width: 420px;
+      }
+    }
+  }
+}

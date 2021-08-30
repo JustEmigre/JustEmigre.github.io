@@ -1,0 +1,61 @@
+.questions {
+  &__wrap {
+    position: relative;
+  }
+
+  &__step {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.35s ease-out;
+    &.active {
+      position: relative;
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .slide-top {
+    margin-top: 50px;
+    @media (min-width: $media_xl) {
+      margin-top: 60px;
+    }
+  }
+  &__list {
+    margin-top: 30px;
+    @media (min-width: $media_xl) {
+      margin-top: 40px;
+    }
+    display: flex;
+    align-items: flex-start;
+    li {
+      + li {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+    @media (min-width: $media_xl) {
+      margin-top: 40px;
+    }
+    .questions__form-input {
+      flex: 0 0 250px;
+      max-width: 250px;
+    }
+    .btn {
+      flex: 0 0 auto;
+      margin-left: 30px;
+    }
+  }
+}
