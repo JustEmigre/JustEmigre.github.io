@@ -6,14 +6,20 @@
     position: fixed;
   }
   &__cover {
-    margin-top: 50px;
+    margin-top: 40px;
+    @media (min-width: $media_lg) {
+      margin-top: 50px;
+    }
     @media (min-width: $media_xl) {
       margin-top: 60px;
     }
   }
 
   &__row {
-    margin-top: -10px;
+    margin-top: 0;
+    @media (min-width: $media_lg) {
+      margin-top: -10px;
+    }
   }
 
   &__col {

@@ -18,12 +18,11 @@
 <body id="home">
   <div id="app">
     <!-- ================= HEADER ================= -->
+    <button class="nav-btn">
+      <div class="nav-btn__burger"></div>
+    </button>
+    <div class="overlay"></div>
     <header class="header">
-      <!-- <a href="#" class="nav-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a> -->
       <div class="header__container">
         <div class="header__top">
           <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="logo" /></a>
@@ -56,12 +55,12 @@
           <div class="slogan main__wrap scene-item">
             <span>Вебкам-студия премиум класса</span>
           </div>
-          <h1 class="scene-item main__wrap" data-depth="0.075">Карьера и высокий доход начинается здесь и сейчас!</h1>
-          <p class="scene-item main__wrap" data-depth="0.05">Если тебе от 18 лет, ты любишь общение и хочешь
+          <h1 class="scene-item main__wrap" data-depth="0.08">Карьера и высокий доход начинается здесь и сейчас!</h1>
+          <p class="scene-item main__wrap" data-depth="0.1">Если тебе от 18 лет, ты любишь общение и хочешь
             контролировать собственный доход и при этом иметь свободный график - присоединяйся к вебкам-студии Star Sky
           </p>
           <div class="main__btn-cover main__wrap scene-item">
-            <a href="#contacts" class="btn btn-ancor">Заполнить анкету</a>
+            <a href="#contacts" class="btn btn-ancor btn-animation">Заполнить анкету</a>
             <a href="#questions" class="btn btn-invert btn-ancor">Пройти тест</a>
           </div>
         </div>
@@ -178,7 +177,7 @@
                       флиртуй, ведь это развлечение которое позволяет отлично зарабатывать!</p>
                   </div>
                 </div>
-                <a href="#contacts" class="btn">Заполнить анкету</a>
+                <a href="#contacts" class="btn btn-ancor">Заполнить анкету</a>
                 <div class="cover-slide-navigation cover-slide-navigation-2"></div>
               </div>
             </div>
@@ -336,7 +335,7 @@
                     <div class="slide-number-current">7</div>
                     <div class="slide-number-all">/ 7</div>
                   </div>
-                  <h4>Докажи, что ты не робот</h4>
+                  <h4>Мы отправим результат на твой e-mail</h4>
                 </div>
                 <form>
                   <input class="questions-input-1" type="hidden" name="step1">
@@ -346,8 +345,7 @@
                   <input class="questions-input-5" type="hidden" name="step5">
                   <input class="questions-input-6" type="hidden" name="step6">
                   <div class="questions__form">
-                    <input class="questions__form-input" type="tel" name="your-phone"
-                      placeholder="Введите номер телефона">
+                    <input class="questions__form-input" type="email" name="your-email" placeholder="E-mail">
                     <input class="btn" type="submit" value="Отправить">
                   </div>
                 </form>
@@ -371,20 +369,20 @@
             </div>
             <div class="contacts__wrap">
               <form>
-                <ul class="form-wrap">
-                  <li>
+                <ul class="form-wrap row">
+                  <li class="col-12 col-sm-6">
                     <input type="text" name="your-name" placeholder="Ваше имя">
                   </li>
-                  <li>
+                  <li class="col-12 col-sm-6">
                     <input type="email" name="your-email" placeholder="E-mail">
                   </li>
-                  <li>
+                  <li class="col-12 col-sm-6">
                     <input type="tel" name="your-phone" placeholder="Номер телефона">
                   </li>
-                  <li>
+                  <li class="col-12 col-sm-6">
                     <input type="text" name="your-link" placeholder="Ссылка на Facebook или Instagram">
                   </li>
-                  <li>
+                  <li class="col-12 col-sm-6">
                     <div class="input-wrap">
                       <div class="input-item">
                         <input type="number" name="your-day" placeholder="День">
@@ -397,7 +395,7 @@
                       </div>
                     </div>
                   </li>
-                  <li>
+                  <li class="col-12 col-sm-6">
                     <input type="text" name="your-city" placeholder="Город проживания">
                   </li>
                 </ul>

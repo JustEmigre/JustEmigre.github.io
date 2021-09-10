@@ -1,11 +1,16 @@
 (function ($) {
   'use strict';
   /* ----------------------- MENU ---------------------- */
-  $('body').on('click', '.nav-btn', function (event) {
-    $(event.currentTarget).toggleClass('active');
-    $('.nav-menu').toggleClass('active');
+  $('.nav-btn').on('click', function () {
+    $(this).toggleClass('active');
+    $('header, .overlay').toggleClass('active');
     $('body').toggleClass('no-scroll');
     return false;
+  });
+  $('.overlay').on('click', function () {
+    $(this).removeClass('active');
+    $('header, .nav-btn').removeClass('active');
+    $('body').removeClass('no-scroll');
   });
 
   $(window)
@@ -72,6 +77,8 @@
 
   /*----------------- SCROLL SECTION	-----------------*/
   $('.nav-list a, .btn-ancor').on('click', function (event) {
+    $('header, .nav-btn, .overlay').removeClass('active');
+    $('body').removeClass('no-scroll');
     var target = $($(this).attr('href'));
     if (target.length) {
       event.preventDefault();
@@ -177,20 +184,6 @@
 
   /* ------------------- TOGGLE ------------------ */
   if ($('.faq__cover')[0]) {
-    // $('.faq__item-header').on('click', function () {
-    //   $('.faq__item-header')
-    //     .not(
-    //       $(this)
-    //         .parents('.faq__item')
-    //         .removeClass('active')
-    //         .find('.faq__item-content')
-    //         .hide('fast')
-    //     )
-    //     .parents('.faq__item')
-    //     .toggleClass('active')
-    //     .find('.faq__item-content')
-    //     .toggle('fast');
-    // });
     $('body').on('click', '.faq__item-header', function (event) {
       $('.faq__item-content')
         .not(

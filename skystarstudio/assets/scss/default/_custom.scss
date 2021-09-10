@@ -37,20 +37,26 @@
 	line-height: 1;
 	img {
 		display: block;
-		max-width: 150px;
+		max-width: 120px;
+		@media (min-width: $media_lg) {
+			max-width: 150px;
+		}
 		@media (min-width: $media_xl) and (min-height: 670px) {
 			max-width: 200px;
 		}
 		@media (min-width: $media_xl) and (min-height: 890px) {
-			max-width: 100%;
+			max-width: 250px;
 		}
 	}
 }
 
 section {
-	padding-left: 340px;
+	padding-left: 0;
 	position: relative;
 	background: linear-gradient(76.1deg, #250b38 0%, #4b1c35 100%);
+	@media (min-width: $media_lg) {
+		padding-left: 320px;
+	}
 	@media (min-width: $media_xl) {
 		padding-left: 400px;
 	}
@@ -85,6 +91,9 @@ section {
 		background-size: contain;
 		z-index: 2;
 		pointer-events: none;
+		@media (max-width: 1199px) {
+			display: none;
+		}
 	}
 }
 .section-bg {
@@ -97,15 +106,24 @@ section {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top right;
-	background-attachment: fixed;
 	mix-blend-mode: screen;
+	background-attachment: fixed;
 }
 
 .section-wrap {
-	min-height: 100vh;
 	position: relative;
 	z-index: 3;
-	padding: 100px 40px 50px 80px;
+	padding: 100px 20px;
+	min-height: 100vh;
+	@media (min-width: $media_sm) {
+		padding: 80px 30px 80px 70px;
+	}
+	@media (min-width: $media_md) {
+		padding: 100px 80px;
+	}
+	@media (min-width: $media_lg) {
+		padding: 100px 40px 50px 80px;
+	}
 	@media (min-width: $media_xl) {
 		padding: 120px 50px 50px 110px;
 	}
@@ -115,6 +133,7 @@ section {
 	@media (min-width: $media_xxl) and (min-height: 850px) {
 		padding: 180px 50px 50px 185px;
 	}
+
 	background-blend-mode: screen;
 	&:before {
 		content: "";
@@ -172,10 +191,13 @@ section {
 	text-transform: uppercase;
 	display: flex;
 	align-items: flex-end;
-	font-size: 12px;
-	margin-bottom: 30px;
+	font-size: 10px;
+	margin-bottom: 50px;
+	@media (min-width: $media_sm) {
+		font-size: 12px;
+	}
 	@media (min-width: $media_xl) {
-		margin-bottom: 40px;
+		margin-bottom: 60px;
 		font-size: 14px;
 	}
 	&:after {
@@ -186,7 +208,10 @@ section {
 		flex-grow: 1;
 		opacity: 0.25;
 		transform: translateY(-1px);
-		margin-left: 30px;
+		margin-left: 20px;
+		@media (min-width: $media_md) {
+			margin-left: 30px;
+		}
 		@media (min-width: $media_xl) {
 			margin-left: 40px;
 		}
@@ -296,7 +321,10 @@ section {
 	align-items: flex-start;
 	h4 {
 		flex-grow: 1;
-		margin-left: 30px;
+		margin-left: 20px;
+		@media (min-width: $media_sm) {
+			margin-left: 30px;
+		}
 		@media (min-width: $media_xl) {
 			margin-left: 34px;
 		}

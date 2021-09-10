@@ -41,8 +41,14 @@ h6 {
 }
 
 h1 {
-	font-size: 56px;
+	font-size: 36px;
 	line-height: 1;
+	@media (min-width: $media_xs) {
+		font-size: 46px;
+	}
+	@media (min-width: $media_sm) {
+		font-size: 56px;
+	}
 	@media (min-width: $media_xl) {
 		font-size: 68px;
 	}
@@ -58,8 +64,14 @@ h1 {
 }
 
 h2 {
-	font-size: 44px;
+	font-size: 30px;
 	line-height: 1.1;
+	@media (min-width: $media_xs) {
+		font-size: 36px;
+	}
+	@media (min-width: $media_sm) {
+		font-size: 44px;
+	}
 	@media (min-width: $media_xl) {
 		font-size: 50px;
 	}
@@ -81,7 +93,7 @@ h3 {
 }
 
 h4 {
-	font-size: 26px;
+	font-size: 24px;
 	line-height: 1.2;
 	@media (min-width: $media_xl) {
 		font-size: 30px;

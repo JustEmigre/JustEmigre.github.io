@@ -8,23 +8,14 @@
     }
   }
   .form-wrap {
-    margin-left: -15px;
-    margin-right: -15px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-top: -30px;
+    margin-bottom: -30px;
     @media (min-width: $media_xl) {
-      margin-top: -40px;
+      margin-bottom: -40px;
     }
     li {
-      padding-left: 15px;
-      padding-right: 15px;
-      flex: 0 0 50%;
-      max-width: 50%;
-      margin-top: 30px;
+      margin-bottom: 30px;
       @media (min-width: $media_xl) {
-        margin-top: 40px;
+        margin-bottom: 40px;
       }
       .input-wrap {
         display: flex;
@@ -44,6 +35,15 @@
     margin-top: 30px;
     @media (min-width: $media_xl) {
       margin-top: 40px;
+    }
+  }
+}
+
+* + {
+  .p-contact-form {
+    margin-top: 50px;
+    @media (min-width: $media_xl) {
+      margin-top: 60px;
     }
   }
 }

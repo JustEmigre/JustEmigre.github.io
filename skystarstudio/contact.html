@@ -18,12 +18,11 @@
 <body id="home">
   <div id="app">
     <!-- ================= HEADER ================= -->
+    <button class="nav-btn">
+      <div class="nav-btn__burger"></div>
+    </button>
+    <div class="overlay"></div>
     <header class="header">
-      <!-- <a href="#" class="nav-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a> -->
       <div class="header__container">
         <div class="header__top">
           <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="logo" /></a>
@@ -50,50 +49,32 @@
 
     <div class="site-content">
       <!-- ================ ABOUT ================ -->
-      <section id="contacts" class="contacts">
-        <div class="section-bg" style="background-image: url(assets/img/bg-form.png);"></div>
+      <section class="contacts">
+        <div class="section-bg" style="background-image: url(assets/img/bg-contact.jpg);"></div>
         <div class="section-wrap">
           <div class="container-fluid">
             <div class="content-wrap">
               <div class="slogan">
-                <span>Анкета</span>
+                <span>Контакты</span>
               </div>
-              <h2>Заполни анкету и начни путь к успеху!</h2>
-            </div>
-            <div class="contacts__wrap">
-              <form>
-                <ul class="form-wrap">
-                  <li>
-                    <input type="text" name="your-name" placeholder="Ваше имя">
-                  </li>
-                  <li>
-                    <input type="email" name="your-email" placeholder="E-mail">
-                  </li>
-                  <li>
-                    <input type="tel" name="your-phone" placeholder="Номер телефона">
-                  </li>
-                  <li>
-                    <input type="text" name="your-link" placeholder="Ссылка на Facebook или Instagram">
-                  </li>
-                  <li>
-                    <div class="input-wrap">
-                      <div class="input-item">
-                        <input type="number" name="your-day" placeholder="День">
-                      </div>
-                      <div class="input-item">
-                        <input type="number" name="your-mounth" placeholder="Месяц">
-                      </div>
-                      <div class="input-item">
-                        <input type="number" name="your-year" placeholder="Год">
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <input type="text" name="your-city" placeholder="Город проживания">
-                  </li>
-                </ul>
-                <input class="btn" type="submit" value="Отправить">
-              </form>
+              <h2>У Вас остались вопросы?</h2>
+              <p>Задайте его нашей службе поддержки поддержки заполнив форму:</p>
+              <div class="p-contact-form">
+                <form>
+                  <ul class="form-wrap row">
+                    <li class="col-12">
+                      <input type="text" name="your-name" placeholder="Ваше имя">
+                    </li>
+                    <li class="col-12">
+                      <input type="email" name="your-email" placeholder="E-mail">
+                    </li>
+                    <li class="col-12">
+                      <input type="text" name="your-question" placeholder="Ваш вопрос?">
+                    </li>
+                  </ul>
+                  <input class="btn" type="submit" value="Отправить">
+                </form>
+              </div>
             </div>
           </div>
         </div>
